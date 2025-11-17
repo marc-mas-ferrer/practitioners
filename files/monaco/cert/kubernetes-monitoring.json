@@ -1,0 +1,7 @@
+{
+  "cloudApplicationPipelineEnabled": true,
+  "pvcMonitoringEnabled": true,
+  "openMetricsPipelineEnabled": true,
+  "openMetricsBuiltinEnabled": true,
+  "eventProcessingActive": true
+}

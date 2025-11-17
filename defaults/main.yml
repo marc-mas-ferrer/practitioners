@@ -1,0 +1,5 @@
+---
+monacoVersion: "2.15.0"
+easytravel_version: "2.0.0.3599"
+dtOperatorVersion: "v1.3.1"
+dtOperatorMode: "classicFullStack" #"cloudNativeFullStack"

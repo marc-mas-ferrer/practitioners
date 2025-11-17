@@ -1,0 +1,93 @@
+---
+configs:
+- id: kubernetes-app
+  type:
+    settings:
+      schema: builtin:app-transition.kubernetes
+      scope: environment
+  config:
+    name: cert-kubernetes-app
+    template: kubernetes-app.json
+    skip: false
+    parameters:        
+      enable_kubernetes_app: true
+
+- id: kubernetes-monitoring
+  type:
+    settings:
+      schema: builtin:cloud.kubernetes.monitoring
+      scope: environment
+  config:
+    name: cert-kubernetes-monitoring
+    template: kubernetes-monitoring.json
+    skip: true
+
+- id: easytrade-app
+  config:
+    name: EasyTrade App
+    template: web-app.json
+    skip: false
+  type:
+    api: application-web
+
+- id: easytrade-app-detection
+  config:
+    name: EasyTrade App Detection
+    parameters:
+      web_app_id:
+        configId: easytrade-app
+        configType: application-web
+        property: id
+        type: reference
+      pattern:
+        type: compound
+        format: "easytrade.{{ .ingressDomain }}"
+        references:
+          - ingressDomain
+      ingressDomain:
+        type: environment
+        name: INGRESS_DOMAIN
+    template: app-detection.json
+    skip: false
+  type:
+    api: app-detection-rule
+
+- id: easytravel-app
+  config:
+    name: EasyTravel App
+    template: web-app.json
+    skip: false
+  type:
+    api: application-web
+
+- id: easytravel-app-detection
+  config:
+    name: EasyTravel App Detection    
+    parameters:
+      web_app_id:
+        configId: easytravel-app
+        configType: application-web
+        property: id
+        type: reference
+      pattern:
+        type: compound
+        format: "easytravel.{{ .ingressDomain }}"
+        references:
+          - ingressDomain
+      ingressDomain:
+        type: environment
+        name: INGRESS_DOMAIN
+    template: app-detection.json
+    skip: false
+  type:
+    api: app-detection-rule
+  
+- id: log-ingestion-rule
+  type:
+    settings:
+      schema: builtin:logmonitoring.log-storage-settings
+      scope: environment
+  config:
+    name: Log Ingest Rule
+    template: log-ingest-rule.json
+    skip: false

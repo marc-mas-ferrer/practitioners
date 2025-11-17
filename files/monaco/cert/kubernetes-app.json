@@ -1,0 +1,5 @@
+{
+  "kubernetesAppOptions": {
+    "enableKubernetesApp": {{ .enable_kubernetes_app }}
+  }
+}

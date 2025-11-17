@@ -1,0 +1,560 @@
+{
+    "anomalyDetection": {
+        "loadingTimeThresholds": {
+            "enabled": false,
+            "thresholds": []
+        },
+        "outageHandling": {
+            "globalOutage": false,
+            "localOutage": true,
+            "localOutagePolicy": {
+                "affectedLocations": 1,
+                "consecutiveRuns": 1
+            },
+            "retryOnError": true
+        }
+    },
+    "automaticallyAssignedApps": [
+        "{{ .web_app_id }}"
+    ],
+    "createdFrom": "API",
+    "enabled": true,
+    "entityId": "SYNTHETIC_TEST-347006363413D3E0",
+    "events": [
+        {
+            "entityId": "SYNTHETIC_TEST_STEP-A2402FA9F5FEE9F1",
+            "name": "Loading of \"{{ .url }}\"",
+            "sequenceNumber": 1
+        },
+        {
+            "entityId": "SYNTHETIC_TEST_STEP-55FA191366F9632E",
+            "name": "click on \"search:destination\"",
+            "sequenceNumber": 2
+        },
+        {
+            "entityId": "SYNTHETIC_TEST_STEP-A07B48C6CEFDA053",
+            "name": "keystrokes on \"search:destination\"",
+            "sequenceNumber": 3
+        },
+        {
+            "entityId": "SYNTHETIC_TEST_STEP-6A2EC88583829C7E",
+            "name": "click on \"search:submit\"",
+            "sequenceNumber": 4
+        },
+        {
+            "entityId": "SYNTHETIC_TEST_STEP-62F8D40367987341",
+            "name": "click on \"search:result\"",
+            "sequenceNumber": 5
+        },
+        {
+            "entityId": "SYNTHETIC_TEST_STEP-D3F459B528E69005",
+            "name": "click",
+            "sequenceNumber": 6
+        },
+        {
+            "entityId": "SYNTHETIC_TEST_STEP-639966B66553D100",
+            "name": "selectOption",
+            "sequenceNumber": 7
+        },
+        {
+            "entityId": "SYNTHETIC_TEST_STEP-EEE92D7A9C1AA9C4",
+            "name": "click",
+            "sequenceNumber": 8
+        },
+        {
+            "entityId": "SYNTHETIC_TEST_STEP-BF3F3B3EE3CE35A7",
+            "name": "click on \"book:booknow\"",
+            "sequenceNumber": 9
+        },
+        {
+            "entityId": "SYNTHETIC_TEST_STEP-0549C25ED8ABBFA4",
+            "name": "click on \"loginForm:username\"",
+            "sequenceNumber": 10
+        },
+        {
+            "entityId": "SYNTHETIC_TEST_STEP-AFD9FDCB55A1D161",
+            "name": "keystrokes on \"loginForm:username\"",
+            "sequenceNumber": 11
+        },
+        {
+            "entityId": "SYNTHETIC_TEST_STEP-175C2615151B7717",
+            "name": "click on \"loginForm:password\"",
+            "sequenceNumber": 12
+        },
+        {
+            "entityId": "SYNTHETIC_TEST_STEP-86D418DCF52DF3A3",
+            "name": "keystrokes on \"loginForm:password\"",
+            "sequenceNumber": 13
+        },
+        {
+            "entityId": "SYNTHETIC_TEST_STEP-6EFCAF5CF45F738D",
+            "name": "click on \"loginForm:submit\"",
+            "sequenceNumber": 14
+        },
+        {
+            "entityId": "SYNTHETIC_TEST_STEP-99258054DCABA2AF",
+            "name": "click on \"payment:pay\"",
+            "sequenceNumber": 15
+        }
+    ],
+    "frequencyMin": 5,
+    "keyPerformanceMetrics": {
+        "loadActionKpm": "VISUALLY_COMPLETE",
+        "xhrActionKpm": "VISUALLY_COMPLETE"
+    },
+    "locations": [
+        "{{ .private_location }}",
+        "{{ .public_location_0 }}",
+        "{{ .public_location_1 }}"
+    ],
+    "managementZones": [],
+    "manuallyAssignedApps": [],
+    "name": "angular easytravel abandon",
+    "script": {
+        "configuration": {
+            "device": {
+                "deviceName": "Desktop",
+                "orientation": "landscape"
+            }
+        },
+        "events": [
+            {
+                "description": "Loading of \"{{.url}}\"",
+                "type": "navigate",
+                "url": "{{.url}}/?utm_source=email&utm_medium=email&utm_campaign=spring_sale",
+                "wait": {
+                    "waitFor": "page_complete"
+                }
+            },
+            {
+                "button": 0,
+                "description": "click on \"search:destination\"",
+                "target": {
+                    "locators": [
+                        {
+                            "type": "css",
+                            "value": "#search\\:destination"
+                        },
+                        {
+                            "type": "css",
+                            "value": "input[name=\"location\"]"
+                        },
+                        {
+                            "type": "dom",
+                            "value": "document.forms[0][\"location\"]"
+                        },
+                        {
+                            "type": "css",
+                            "value": ".hero-form-input:eq(0)"
+                        },
+                        {
+                            "type": "css",
+                            "value": "html body:nth-child(8) app-root app-dashboard:nth-child(2) app-main-layout div div:nth-child(2) app-hero div section form:nth-child(4) div div input"
+                        }
+                    ]
+                },
+                "type": "click",
+                "wait": {
+                    "waitFor": "network"
+                }
+            },
+            {
+                "description": "keystrokes on \"search:destination\"",
+                "masked": false,
+                "simulateBlurEvent": true,
+                "target": {
+                    "locators": [
+                        {
+                            "type": "css",
+                            "value": "#search\\:destination"
+                        },
+                        {
+                            "type": "css",
+                            "value": "input[name=\"location\"]"
+                        },
+                        {
+                            "type": "dom",
+                            "value": "document.forms[0][\"location\"]"
+                        },
+                        {
+                            "type": "css",
+                            "value": ".hero-form-input:eq(0)"
+                        },
+                        {
+                            "type": "css",
+                            "value": "html body:nth-child(8) app-root app-dashboard:nth-child(2) app-main-layout div div:nth-child(2) app-hero div section form:nth-child(4) div div input"
+                        }
+                    ]
+                },
+                "textValue": "Paris",
+                "type": "keystrokes",
+                "wait": {
+                    "waitFor": "network"
+                }
+            },
+            {
+                "button": 0,
+                "description": "click on \"search:submit\"",
+                "target": {
+                    "locators": [
+                        {
+                            "type": "css",
+                            "value": "button[type=\"submit\"][name=\"search:submit\"]"
+                        },
+                        {
+                            "type": "dom",
+                            "value": "document.forms[0][98]"
+                        },
+                        {
+                            "type": "css",
+                            "value": "button:contains(\"Search\")"
+                        },
+                        {
+                            "type": "css",
+                            "value": ".hero-form-input:eq(4)"
+                        },
+                        {
+                            "type": "css",
+                            "value": "html body:nth-child(8) app-root app-dashboard:nth-child(2) app-main-layout div div:nth-child(2) app-hero div section form:nth-child(4) div:nth-child(5) button"
+                        },
+                        {
+                            "type": "css",
+                            "value": "body app-root app-dashboard app-main-layout.landing-page div.page div.page-content app-hero div.hero-wrapper section.page-section form.hero-form div.hero-form-field button.hero-form-input:eq(0)"
+                        }
+                    ]
+                },
+                "type": "click",
+                "wait": {
+                    "waitFor": "network"
+                }
+            },
+            {
+                "button": 0,
+                "description": "click on \"search:result\"",
+                "target": {
+                    "locators": [
+                        {
+                            "type": "css",
+                            "value": "#search\\:result:eq(0)"
+                        },
+                        {
+                            "type": "css",
+                            "value": "a:contains(\"Palm - Paris\")"
+                        },
+                        {
+                            "type": "css",
+                            "value": "html body:nth-child(8) app-root app-search:nth-child(2) app-main-layout div div:nth-child(2) main:nth-child(2) app-offers-list div app-offer:nth-child(2) h3:nth-child(2) a"
+                        }
+                    ]
+                },
+                "type": "click",
+                "wait": {
+                    "waitFor": "network"
+                }
+            },
+            {
+                "button": 0,
+                "description": "click",
+                "target": {
+                    "locators": [
+                        {
+                            "type": "css",
+                            "value": "select"
+                        },
+                        {
+                            "type": "dom",
+                            "value": "document.forms[0][0]"
+                        },
+                        {
+                            "type": "css",
+                            "value": ".ng-untouched:eq(1)"
+                        },
+                        {
+                            "type": "css",
+                            "value": "html body:nth-child(8) app-root app-journey:nth-child(2) app-main-layout div div:nth-child(2) main:nth-child(2) div div:nth-child(6) form:nth-child(2) select"
+                        },
+                        {
+                            "type": "css",
+                            "value": "body app-root app-journey app-main-layout.search-page div.page div.page-content main.page-section div.widget div.journey-actions form.ng-untouched select.ng-untouched"
+                        }
+                    ]
+                },
+                "type": "click",
+                "wait": {
+                    "waitFor": "network"
+                }
+            },
+            {
+                "description": "selectOption",
+                "selections": [
+                    {
+                        "index": 5,
+                        "value": "6"
+                    }
+                ],
+                "target": {
+                    "locators": [
+                        {
+                            "type": "css",
+                            "value": "select"
+                        },
+                        {
+                            "type": "dom",
+                            "value": "document.forms[0][0]"
+                        },
+                        {
+                            "type": "css",
+                            "value": ".ng-untouched:eq(1)"
+                        },
+                        {
+                            "type": "css",
+                            "value": "html body:nth-child(8) app-root app-journey:nth-child(2) app-main-layout div div:nth-child(2) main:nth-child(2) div div:nth-child(6) form:nth-child(2) select"
+                        },
+                        {
+                            "type": "css",
+                            "value": "body app-root app-journey app-main-layout.search-page div.page div.page-content main.page-section div.widget div.journey-actions form.ng-untouched select.ng-untouched"
+                        }
+                    ]
+                },
+                "type": "selectOption"
+            },
+            {
+                "button": 0,
+                "description": "click",
+                "target": {
+                    "locators": [
+                        {
+                            "type": "css",
+                            "value": "select"
+                        },
+                        {
+                            "type": "dom",
+                            "value": "document.forms[0][0]"
+                        },
+                        {
+                            "type": "css",
+                            "value": ".ng-untouched:eq(1)"
+                        },
+                        {
+                            "type": "css",
+                            "value": "html body:nth-child(8) app-root app-journey:nth-child(2) app-main-layout div div:nth-child(2) main:nth-child(2) div div:nth-child(6) form:nth-child(2) select"
+                        },
+                        {
+                            "type": "css",
+                            "value": "body app-root app-journey app-main-layout.search-page div.page div.page-content main.page-section div.widget div.journey-actions form.ng-untouched select.ng-untouched"
+                        }
+                    ]
+                },
+                "type": "click",
+                "wait": {
+                    "waitFor": "network"
+                }
+            },
+            {
+                "button": 0,
+                "description": "click on \"book:booknow\"",
+                "target": {
+                    "locators": [
+                        {
+                            "type": "css",
+                            "value": "button[name=\"book:booknow\"]"
+                        },
+                        {
+                            "type": "dom",
+                            "value": "document.forms[0][1]"
+                        },
+                        {
+                            "type": "css",
+                            "value": "button:contains(\"Book Now\")"
+                        },
+                        {
+                            "type": "css",
+                            "value": "html body:nth-child(8) app-root app-journey:nth-child(2) app-main-layout div div:nth-child(2) main:nth-child(2) div div:nth-child(6) form:nth-child(2) button:nth-child(2)"
+                        },
+                        {
+                            "type": "css",
+                            "value": "body app-root app-journey app-main-layout.search-page div.page div.page-content main.page-section div.widget div.journey-actions form.ng-untouched button"
+                        }
+                    ]
+                },
+                "type": "click",
+                "wait": {
+                    "waitFor": "network"
+                }
+            },
+            {
+                "button": 0,
+                "description": "click on \"loginForm:username\"",
+                "target": {
+                    "locators": [
+                        {
+                            "type": "css",
+                            "value": "#loginForm\\:username"
+                        },
+                        {
+                            "type": "css",
+                            "value": "input[type=\"text\"][name=\"email\"]"
+                        },
+                        {
+                            "type": "dom",
+                            "value": "document.forms[0][\"email\"]"
+                        },
+                        {
+                            "type": "css",
+                            "value": ".ng-untouched:eq(1)"
+                        },
+                        {
+                            "type": "css",
+                            "value": "html body:nth-child(8) app-root app-book-journey:nth-child(2) app-main-layout div div:nth-child(2) main:nth-child(2) div:nth-child(3) app-login-form form div input"
+                        }
+                    ]
+                },
+                "type": "click",
+                "wait": {
+                    "waitFor": "network"
+                }
+            },
+            {
+                "description": "keystrokes on \"loginForm:username\"",
+                "masked": false,
+                "simulateBlurEvent": true,
+                "target": {
+                    "locators": [
+                        {
+                            "type": "css",
+                            "value": "#loginForm\\:username"
+                        },
+                        {
+                            "type": "css",
+                            "value": "input[type=\"text\"][name=\"email\"]"
+                        },
+                        {
+                            "type": "dom",
+                            "value": "document.forms[0][\"email\"]"
+                        },
+                        {
+                            "type": "css",
+                            "value": ".ng-untouched:eq(1)"
+                        },
+                        {
+                            "type": "css",
+                            "value": "html body:nth-child(8) app-root app-book-journey:nth-child(2) app-main-layout div div:nth-child(2) main:nth-child(2) div:nth-child(3) app-login-form form div input"
+                        }
+                    ]
+                },
+                "textValue": "maria",
+                "type": "keystrokes",
+                "wait": {
+                    "waitFor": "network"
+                }
+            },
+            {
+                "button": 0,
+                "description": "click on \"loginForm:password\"",
+                "target": {
+                    "locators": [
+                        {
+                            "type": "css",
+                            "value": "#loginForm\\:password"
+                        },
+                        {
+                            "type": "css",
+                            "value": "input[type=\"password\"][name=\"password\"]"
+                        },
+                        {
+                            "type": "dom",
+                            "value": "document.forms[0][1]"
+                        },
+                        {
+                            "type": "css",
+                            "value": "html body:nth-child(8) app-root app-book-journey:nth-child(2) app-main-layout div div:nth-child(2) main:nth-child(2) div:nth-child(3) app-login-form form input:nth-child(2)"
+                        }
+                    ]
+                },
+                "type": "click",
+                "wait": {
+                    "waitFor": "network"
+                }
+            },
+            {
+                "description": "keystrokes on \"loginForm:password\"",
+                "masked": true,
+                "simulateBlurEvent": true,
+                "target": {
+                    "locators": [
+                        {
+                            "type": "css",
+                            "value": "#loginForm\\:password"
+                        },
+                        {
+                            "type": "css",
+                            "value": "input[type=\"password\"][name=\"password\"]"
+                        },
+                        {
+                            "type": "dom",
+                            "value": "document.forms[0][1]"
+                        },
+                        {
+                            "type": "css",
+                            "value": "html body:nth-child(8) app-root app-book-journey:nth-child(2) app-main-layout div div:nth-child(2) main:nth-child(2) div:nth-child(3) app-login-form form input:nth-child(2)"
+                        }
+                    ]
+                },
+                "textValue": "U2FsdGVkX1/D80i0V/xonvmbi0GLe1rd0Po4OmgINL0=",
+                "type": "keystrokes"
+            },
+            {
+                "button": 0,
+                "description": "click on \"loginForm:submit\"",
+                "target": {
+                    "locators": [
+                        {
+                            "type": "css",
+                            "value": "#loginForm\\:submit"
+                        },
+                        {
+                            "type": "css",
+                            "value": "button[type=\"submit\"]"
+                        },
+                        {
+                            "type": "dom",
+                            "value": "document.forms[0][2]"
+                        },
+                        {
+                            "type": "css",
+                            "value": "button:contains(\"Sign In\")"
+                        },
+                        {
+                            "type": "css",
+                            "value": "html body:nth-child(8) app-root app-book-journey:nth-child(2) app-main-layout div div:nth-child(2) main:nth-child(2) div:nth-child(3) app-login-form form button:nth-child(4)"
+                        }
+                    ]
+                },
+                "type": "click",
+                "wait": {
+                    "waitFor": "network"
+                }
+            },
+            {
+                "button": 0,
+                "description": "click on \"payment:pay\"",
+                "target": {
+                    "locators": [
+                        {
+                            "type": "css",
+                            "value": "button[name=\"payment:pay\"]"
+                        }
+                    ]
+                },
+                "type": "click",
+                "wait": {
+                    "waitFor": "network"
+                }
+            }
+        ],
+        "type": "clickpath",
+        "version": "1.0"
+    },
+    "tags": [],
+    "type": "BROWSER"
+}

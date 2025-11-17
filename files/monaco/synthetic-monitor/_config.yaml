@@ -1,0 +1,118 @@
+---
+configs:
+  # private-sythetic-location
+  - id: synthetic-location-ace-box
+    type:
+      api: synthetic-location
+    config:
+      name: ACE-BOX-CERTS
+      template: private-synthetic-location.json
+      parameters:
+        nodeId:
+          name: SYNTH_NODE_ID
+          type: environment
+      skip: false
+
+  # sythetic-monitors
+  - id: synth-easytravel-abandon
+    type:
+      api: synthetic-monitor
+    config:
+      skip: false
+      name: Clickpath Easytravel Abandon
+      template: angular-easytravel-abandon.json   
+      parameters:
+        description: Clickpath for Easytravel Abandon
+        web_app_id:
+          project: cert
+          configId: easytravel-app
+          configType: application-web
+          property: id
+          type: reference    
+        private_location:
+          configId: synthetic-location-ace-box
+          configType: synthetic-location
+          property: id
+          type: reference  
+        public_location_0: "GEOLOCATION-9999453BE4BDB3CD"
+        public_location_1: "GEOLOCATION-E632D7F0FABC058C"
+        frequencyMin: 5
+        url:
+          type: compound
+          format: "{{ .ingressProtocol }}://easytravel.{{ .ingressDomain }}"
+          references:
+            - ingressProtocol
+            - ingressDomain
+        ingressProtocol:
+          type: environment
+          name: INGRESS_PROTOCOL
+        ingressDomain:
+          type: environment
+          name: INGRESS_DOMAIN
+
+  - id: synth-easytravel-booking
+    type:
+      api: synthetic-monitor
+    config:
+      skip: false
+      name: Clickpath Easytravel Booking
+      template: angular-easytravel-booking.json   
+      parameters:
+        description: Clickpath for Easytravel Booking
+        web_app_id:
+          project: cert
+          configId: easytravel-app
+          configType: application-web
+          property: id
+          type: reference     
+        public_location_0: "GEOLOCATION-9999453BE4BDB3CD"
+        public_location_1: "GEOLOCATION-E632D7F0FABC058C"
+        frequencyMin: 5
+        url:
+          type: compound
+          format: "{{ .ingressProtocol }}://easytravel.{{ .ingressDomain }}"
+          references:
+            - ingressProtocol
+            - ingressDomain
+        ingressProtocol:
+          type: environment
+          name: INGRESS_PROTOCOL
+        ingressDomain:
+          type: environment
+          name: INGRESS_DOMAIN
+  
+  - id: synth-easytrade
+    type:
+      api: synthetic-monitor
+    config:
+      skip: false
+      name: Clickpath Easytrade
+      template: easytrade-clickpath.json   
+      parameters:
+        description: Clickpath for Easytrade
+        web_app_id:
+          project: cert
+          configId: easytrade-app
+          configType: application-web
+          property: id
+          type: reference    
+        private_location:
+          configId: synthetic-location-ace-box
+          configType: synthetic-location
+          property: id
+          type: reference  
+        public_location_0: "GEOLOCATION-9999453BE4BDB3CD"
+        public_location_1: "GEOLOCATION-E632D7F0FABC058C"
+        frequencyMin: 5
+        url:
+          type: compound
+          format: "{{ .ingressProtocol }}://easytrade.{{ .ingressDomain }}"
+          references:
+            - ingressProtocol
+            - ingressDomain
+        ingressProtocol:
+          type: environment
+          name: INGRESS_PROTOCOL
+        ingressDomain:
+          type: environment
+          name: INGRESS_DOMAIN

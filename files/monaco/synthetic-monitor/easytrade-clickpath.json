@@ -1,0 +1,499 @@
+{
+    "entityId": "SYNTHETIC_TEST-69657DB73C164AC9",
+    "name": "easytrade clickpath",
+    "frequencyMin": 5,
+    "enabled": true,
+    "type": "BROWSER",
+    "createdFrom": "GUI",
+    "script": {
+      "type": "clickpath",
+      "version": "1.0",
+      "configuration": {
+        "device": {
+          "deviceName": "Desktop",
+          "orientation": "landscape"
+        },
+        "chromiumStartupFlags": {
+          "disable-web-security": false
+        }
+      },
+      "events": [
+        {
+          "type": "navigate",
+          "description": "Loading of \"{{ .url }}\"",
+          "url": "{{ .url }}",
+          "wait": {
+            "waitFor": "page_complete"
+          }
+        },
+        {
+          "type": "click",
+          "description": "click",
+          "target": {
+            "locators": [
+              {
+                "type": "css",
+                "value": "button[type=\"submit\"]:eq(1)"
+              },
+              {
+                "type": "css",
+                "value": "button:contains(\"Log in as\")"
+              },
+              {
+                "type": "css",
+                "value": ".MuiButtonBase-root:eq(4)"
+              },
+              {
+                "type": "css",
+                "value": "#root div div:nth-child(2) div div div div:nth-child(3) form div:nth-child(2) div button"
+              },
+              {
+                "type": "css",
+                "value": "#root div.MuiStack-root div.MuiBox-root div.MuiPaper-root div.MuiCardContent-root div.MuiStack-root div.MuiGrid2-root form div.MuiGrid2-root div.MuiCardActions-root button.MuiButtonBase-root:eq(1)"
+              }
+            ]
+          },
+          "button": 0,
+          "wait": {
+            "waitFor": "network"
+          }
+        },
+        {
+          "type": "click",
+          "description": "click on \"EasyPlanes\"",
+          "target": {
+            "locators": [
+              {
+                "type": "css",
+                "value": "div:contains(\"EasyPlanes\"):eq(13)"
+              },
+              {
+                "type": "css",
+                "value": ".MuiDataGrid-cellContent:eq(6)"
+              },
+              {
+                "type": "css",
+                "value": "#root div div:nth-child(2) div:nth-child(2) div div div:nth-child(3) div:nth-child(2) div:nth-child(2) div div div:nth-child(2) div:nth-child(2) div"
+              },
+              {
+                "type": "css",
+                "value": "#root div.MuiStack-root div.MuiBox-root div.MuiGrid2-root div.MuiContainer-root div.MuiStack-root div.MuiDataGrid-root div.MuiDataGrid-main div.MuiDataGrid-virtualScroller div.MuiDataGrid-virtualScrollerContent div.MuiDataGrid-virtualScrollerRenderZone div.MuiDataGrid-row div.MuiDataGrid-cell div.MuiDataGrid-cellContent:eq(6)"
+              }
+            ]
+          },
+          "button": 0
+        },
+        {
+          "type": "click",
+          "description": "click on \"EPLANE\"",
+          "target": {
+            "locators": [
+              {
+                "type": "css",
+                "value": "div:contains(\"EPLANE\"):eq(16)"
+              },
+              {
+                "type": "css",
+                "value": ".MuiDataGrid-cellContent:eq(5)"
+              },
+              {
+                "type": "css",
+                "value": "#root div div:nth-child(2) div:nth-child(2) div div div:nth-child(3) div:nth-child(2) div:nth-child(2) div div div:nth-child(2) div div"
+              },
+              {
+                "type": "css",
+                "value": "#root div.MuiStack-root div.MuiBox-root div.MuiGrid2-root div.MuiContainer-root div.MuiStack-root div.MuiDataGrid-root div.MuiDataGrid-main div.MuiDataGrid-virtualScroller div.MuiDataGrid-virtualScrollerContent div.MuiDataGrid-virtualScrollerRenderZone div.MuiDataGrid-row div.MuiDataGrid-cell div.MuiDataGrid-cellContent:eq(5)"
+              }
+            ]
+          },
+          "button": 0
+        },
+        {
+          "type": "click",
+          "description": "click on \"Instruments\"",
+          "target": {
+            "locators": [
+              {
+                "type": "css",
+                "value": "a:contains(\"Instruments\")"
+              },
+              {
+                "type": "css",
+                "value": "span:contains(\"Instruments\")"
+              },
+              {
+                "type": "css",
+                "value": ".MuiTypography-root:eq(3)"
+              },
+              {
+                "type": "css",
+                "value": "#root div div:nth-child(2) div div div:nth-child(2) ul li:nth-child(2) a div:nth-child(2) span"
+              },
+              {
+                "type": "css",
+                "value": "#root div.MuiStack-root div.MuiBox-root div.MuiDrawer-root div.MuiPaper-root div.MuiBox-root ul.MuiList-root li.MuiListItem-root a.MuiButtonBase-root div.MuiListItemText-root span.MuiTypography-root:eq(1)"
+              }
+            ]
+          },
+          "button": 0
+        },
+        {
+          "type": "click",
+          "description": "click on \"ETRAVE\"",
+          "target": {
+            "locators": [
+              {
+                "type": "css",
+                "value": "a:contains(\"ETRAVE\")"
+              },
+              {
+                "type": "css",
+                "value": "span:contains(\"ETRAVE\")"
+              },
+              {
+                "type": "css",
+                "value": ".MuiTypography-root:eq(7)"
+              },
+              {
+                "type": "css",
+                "value": "#root div div:nth-child(2) div:nth-child(2) div div div div div a div div div span"
+              },
+              {
+                "type": "css",
+                "value": "#root div.MuiStack-root div.MuiBox-root div.MuiGrid2-root div.MuiGrid-root div.MuiGrid-root div.MuiGrid2-root div.MuiGrid2-root div.MuiPaper-root a.MuiButtonBase-root div.MuiStack-root div.MuiCardHeader-root div.MuiCardHeader-content span.MuiTypography-root:eq(0)"
+              }
+            ]
+          },
+          "button": 0,
+          "wait": {
+            "waitFor": "network"
+          }
+        },
+        {
+          "type": "click",
+          "description": "click on \"Amount *\"",
+          "target": {
+            "locators": [
+              {
+                "type": "css",
+                "value": "#amount"
+              },
+              {
+                "type": "css",
+                "value": "input[type=\"number\"][name=\"amount\"]"
+              },
+              {
+                "type": "css",
+                "value": ".MuiInputBase-input:eq(0)"
+              },
+              {
+                "type": "css",
+                "value": "#mui-p-38433-P-quick-buy div form div div div div:nth-child(2) input"
+              },
+              {
+                "type": "css",
+                "value": "#amount"
+              }
+            ]
+          },
+          "button": 0
+        },
+        {
+          "type": "keystrokes",
+          "description": "keystrokes on \"Amount *\"",
+          "target": {
+            "locators": [
+              {
+                "type": "css",
+                "value": "#amount"
+              },
+              {
+                "type": "css",
+                "value": "input[type=\"number\"][name=\"amount\"]"
+              },
+              {
+                "type": "css",
+                "value": ".MuiInputBase-input:eq(0)"
+              },
+              {
+                "type": "css",
+                "value": "#mui-p-38433-P-quick-buy div form div div div div:nth-child(2) input"
+              },
+              {
+                "type": "css",
+                "value": "#amount"
+              }
+            ]
+          },
+          "simulateBlurEvent": true,
+          "textValue": "100",
+          "masked": false
+        },
+        {
+          "type": "click",
+          "description": "click on \"submitButton\"",
+          "target": {
+            "locators": [
+              {
+                "type": "css",
+                "value": "#submitButton"
+              },
+              {
+                "type": "css",
+                "value": "button[type=\"submit\"]"
+              },
+              {
+                "type": "css",
+                "value": "button:contains(\"Buy\"):eq(2)"
+              },
+              {
+                "type": "css",
+                "value": ".MuiButtonBase-root:eq(14)"
+              },
+              {
+                "type": "css",
+                "value": "#mui-p-38433-P-quick-buy div form div div:nth-child(5) div button"
+              },
+              {
+                "type": "css",
+                "value": "#submitButton"
+              }
+            ]
+          },
+          "button": 0,
+          "wait": {
+            "waitFor": "network"
+          }
+        },
+        {
+          "type": "click",
+          "description": "click on \"mui-p-38433-T-quick-sell\"",
+          "target": {
+            "locators": [
+              {
+                "type": "css",
+                "value": "#mui-p-38433-T-quick-sell"
+              },
+              {
+                "type": "css",
+                "value": "button[type=\"button\"]:eq(5)"
+              },
+              {
+                "type": "css",
+                "value": "button:contains(\"Quick Sell\")"
+              },
+              {
+                "type": "css",
+                "value": ".MuiButtonBase-root:eq(11)"
+              },
+              {
+                "type": "css",
+                "value": "#root div div:nth-child(2) div:nth-child(2) div div:nth-child(2) div div div div div div button:nth-child(2)"
+              },
+              {
+                "type": "css",
+                "value": "#mui-p-38433-T-quick-sell"
+              }
+            ]
+          },
+          "button": 0
+        },
+        {
+          "type": "click",
+          "description": "click on \"Amount *\"",
+          "target": {
+            "locators": [
+              {
+                "type": "css",
+                "value": "#amount"
+              },
+              {
+                "type": "css",
+                "value": "input[type=\"number\"][name=\"amount\"]"
+              },
+              {
+                "type": "css",
+                "value": ".MuiInputBase-input:eq(0)"
+              },
+              {
+                "type": "css",
+                "value": "#mui-p-38433-P-quick-sell div form div div div div:nth-child(2) input"
+              },
+              {
+                "type": "css",
+                "value": "#amount"
+              }
+            ]
+          },
+          "button": 0
+        },
+        {
+          "type": "keystrokes",
+          "description": "keystrokes on \"Amount *\"",
+          "target": {
+            "locators": [
+              {
+                "type": "css",
+                "value": "#amount"
+              },
+              {
+                "type": "css",
+                "value": "input[type=\"number\"][name=\"amount\"]"
+              },
+              {
+                "type": "css",
+                "value": ".MuiInputBase-input:eq(0)"
+              },
+              {
+                "type": "css",
+                "value": "#mui-p-38433-P-quick-sell div form div div div div:nth-child(2) input"
+              },
+              {
+                "type": "css",
+                "value": "#amount"
+              }
+            ]
+          },
+          "simulateBlurEvent": true,
+          "textValue": "200",
+          "masked": false
+        },
+        {
+          "type": "click",
+          "description": "click on \"submitButton\"",
+          "target": {
+            "locators": [
+              {
+                "type": "css",
+                "value": "#submitButton"
+              },
+              {
+                "type": "css",
+                "value": "button[type=\"submit\"]"
+              },
+              {
+                "type": "css",
+                "value": "button:contains(\"Sell\"):eq(2)"
+              },
+              {
+                "type": "css",
+                "value": ".MuiButtonBase-root:eq(14)"
+              },
+              {
+                "type": "css",
+                "value": "#mui-p-38433-P-quick-sell div form div div:nth-child(5) div button"
+              },
+              {
+                "type": "css",
+                "value": "#submitButton"
+              }
+            ]
+          },
+          "button": 0,
+          "wait": {
+            "waitFor": "network"
+          }
+        }
+      ]
+    },
+    "locations": [
+        "{{ .private_location }}",
+        "{{ .public_location_0 }}",
+        "{{ .public_location_1 }}"
+    ],
+    "anomalyDetection": {
+      "outageHandling": {
+        "globalOutage": true,
+        "globalOutagePolicy": {
+          "consecutiveRuns": 1
+        },
+        "localOutage": false,
+        "localOutagePolicy": {
+          "affectedLocations": null,
+          "consecutiveRuns": null
+        },
+        "retryOnError": true
+      },
+      "loadingTimeThresholds": {
+        "enabled": true,
+        "thresholds": []
+      }
+    },
+    "tags": [],
+    "managementZones": [],
+    "automaticallyAssignedApps": [
+        "{{ .web_app_id }}"
+    ],
+    "manuallyAssignedApps": [],
+    "keyPerformanceMetrics": {
+      "loadActionKpm": "VISUALLY_COMPLETE",
+      "xhrActionKpm": "VISUALLY_COMPLETE"
+    },
+    "events": [
+      {
+        "entityId": "SYNTHETIC_TEST_STEP-C6C2A3AD0375E594",
+        "name": "Loading of \"{{ .url }}\"",
+        "sequenceNumber": 1
+      },
+      {
+        "entityId": "SYNTHETIC_TEST_STEP-F800942348646254",
+        "name": "click",
+        "sequenceNumber": 2
+      },
+      {
+        "entityId": "SYNTHETIC_TEST_STEP-9153074D1C2E3E77",
+        "name": "click on \"EasyPlanes\"",
+        "sequenceNumber": 3
+      },
+      {
+        "entityId": "SYNTHETIC_TEST_STEP-957585D020E6D699",
+        "name": "click on \"EPLANE\"",
+        "sequenceNumber": 4
+      },
+      {
+        "entityId": "SYNTHETIC_TEST_STEP-8AAD46DF2D974627",
+        "name": "click on \"Instruments\"",
+        "sequenceNumber": 5
+      },
+      {
+        "entityId": "SYNTHETIC_TEST_STEP-CA45452BB8A57372",
+        "name": "click on \"ETRAVE\"",
+        "sequenceNumber": 6
+      },
+      {
+        "entityId": "SYNTHETIC_TEST_STEP-F2DEF286710A154A",
+        "name": "click on \"Amount *\"",
+        "sequenceNumber": 7
+      },
+      {
+        "entityId": "SYNTHETIC_TEST_STEP-17F30E87A3FB075F",
+        "name": "keystrokes on \"Amount *\"",
+        "sequenceNumber": 8
+      },
+      {
+        "entityId": "SYNTHETIC_TEST_STEP-5688F576DE80A8F6",
+        "name": "click on \"submitButton\"",
+        "sequenceNumber": 9
+      },
+      {
+        "entityId": "SYNTHETIC_TEST_STEP-71115C4D3BEE864F",
+        "name": "click on \"mui-p-38433-T-quick-sell\"",
+        "sequenceNumber": 10
+      },
+      {
+        "entityId": "SYNTHETIC_TEST_STEP-C20F958E065E496D",
+        "name": "click on \"Amount *\"",
+        "sequenceNumber": 11
+      },
+      {
+        "entityId": "SYNTHETIC_TEST_STEP-EFEC585B1ECBB25F",
+        "name": "keystrokes on \"Amount *\"",
+        "sequenceNumber": 12
+      },
+      {
+        "entityId": "SYNTHETIC_TEST_STEP-42D0C9B7177F3227",
+        "name": "click on \"submitButton\"",
+        "sequenceNumber": 13
+      }
+    ]
+  }
